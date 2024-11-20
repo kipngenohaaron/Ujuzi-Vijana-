@@ -36,7 +36,8 @@ body {
   
   /* Hero */
   .hero {
-    background-image: url('hero-image.jpg');
+    /* background-image: url('hero-image.jpg'); */
+   
     background-size: cover;
     color: white;
     text-align: center;
