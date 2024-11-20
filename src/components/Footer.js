@@ -23,6 +23,7 @@ function Footer() {
     <footer className="bg-light text-center py-4">
       <p>© 2024 Ujuzi Vijana | All Rights Reserved</p>
       <div>
+        <Link to="/about" className="me-3">About Us</Link>
         <Link to="/get-involved" className="me-3">Get Involved</Link>
         <Link to="/contact" className="me-3">Contact Us</Link>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="me-3">Facebook</a>
@@ -34,3 +35,4 @@ function Footer() {
 }
 
 export default Footer;
+
