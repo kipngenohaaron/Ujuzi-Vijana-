@@ -1,11 +1,12 @@
 import React from "react";
-import heroImage from "./assets/hero-image.jpg";  // Import the image
 
 function Hero() {
   return (
-    <div className="hero" style={{ backgroundImage: `url(${heroImage})` }}>
-      <h1>Welcome to Ujuzi Vijana!</h1>
-    </div>
+    <section className="hero">
+      <h2>Empowering Youth Through Skill Development</h2>
+      <p>Join Ujuzi Vijana and gain the skills to shape your future.</p>
+      <a href="#get-involved" className="cta-button">Start Learning</a>
+    </section>
   );
 }
 

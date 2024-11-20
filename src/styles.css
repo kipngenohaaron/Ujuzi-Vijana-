@@ -37,11 +37,14 @@ body {
   /* Hero */
   .hero {
     /* background-image: url('hero-image.jpg'); */
-   
     background-size: cover;
     color: white;
     text-align: center;
     padding: 100px 20px;
+  }
+  .hero {
+    background-image: url('./assets/hero-image.jpg');
+    /* other styles */
   }
   
   .hero h2 {
