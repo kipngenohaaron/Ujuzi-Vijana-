@@ -42,4 +42,52 @@
   .team .card-body p {
     font-size: 1rem;
   }
-  
+  /* styles.css */
+.navbar {
+  background-color: #007bff; /* Primary color */
+  padding: 1rem 2rem; /* Add padding around the navbar */
+}
+
+/* Logo Styling */
+.navbar .logo {
+  width: 40px; /* Adjust logo size */
+  margin-right: 10px;
+}
+
+/* Navbar Links Styling */
+.navbar .nav-link {
+  color: #240ee9 !important; /* White text color */
+  font-size: 18px; /* Font size */
+  margin-left: 20px; /* Add space between links */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Active link styling */
+.navbar .nav-link.active {
+  font-weight: bold; /* Make active link bold */
+  text-decoration: underline; /* Underline active link */
+}
+
+/* Navbar link hover effect */
+.navbar .nav-link:hover {
+  color: #ff00bf !important; /* Change color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+  .navbar .navbar-toggler {
+    border-color: #da2323; /* White toggle icon */
+  }
+
+  .navbar .navbar-toggler-icon {
+    background-color: #5a22b3; /* White icon */
+  }
+}
+
+/* Adding padding to the navbar on smaller screens */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 1rem; /* Reduce padding on small screens */
+  }
+}
