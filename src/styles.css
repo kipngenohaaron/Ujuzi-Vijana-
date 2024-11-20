@@ -1,46 +1,45 @@
-/* styles.css */
-
-/* General form styles */
-.form-label {
+/* About Us Styles */
+.about-us h2 {
+    font-size: 2.5rem;
     font-weight: bold;
   }
   
-  .form-control {
-    border-radius: 8px;
+  .about-us h3 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
   }
   
-  /* Get Involved Cards */
-  .card {
+  .about-us p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .team .card {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .card-body {
+  .team .card img {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .team .card-body {
     text-align: center;
   }
   
-  .card-title {
-    font-size: 1.25rem;
+  .team .card-title {
     font-weight: bold;
+    font-size: 1.25rem;
   }
   
-  .card-text {
+  .team .card-text {
     font-size: 1rem;
     margin-bottom: 1.25rem;
   }
   
-  /* Footer */
-  footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-  }
-  
-  footer a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
+  .team .card-body p {
+    font-size: 1rem;
   }
   
