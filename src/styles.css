@@ -42,12 +42,4 @@
   .team .card-body p {
     font-size: 1rem;
   }
-  /* Styling for the random image */
-.about-us .img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
   
