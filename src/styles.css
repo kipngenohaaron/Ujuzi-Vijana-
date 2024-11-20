@@ -1,72 +1,36 @@
 /* styles.css */
 
-/* Basic layout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  /* Header */
-  header {
-    background-color: #004d40;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  header nav ul {
-    list-style: none;
-  }
-  
-  header nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  /* Hero */
-  .hero {
-    /* background-image: url('hero-image.jpg'); */
+/* Hero section */
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  .hero {
-    background-image: url('./assets/hero-image.jpg');
-    /* other styles */
   }
   
-  .hero h2 {
-    font-size: 36px;
-  }
-  
-  .hero p {
-    font-size: 24px;
-    margin-bottom: 20px;
+  /* Program cards */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   /* Footer */
   footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
+    background-color: #f8f9fa;
     padding: 20px;
   }
   
-  footer .footer-links a {
-    color: white;
+  footer a {
     text-decoration: none;
+    color: #007bff;
     margin: 0 10px;
+  }
+  footer a:hover {
+    text-decoration: underline;
   }
   
