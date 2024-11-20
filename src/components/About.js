@@ -8,9 +8,10 @@ function getRandomImage() {
     'image2.jpg',
     'image3.jpg',
   ];
-  
+
+  // Randomly pick an image
   const randomIndex = Math.floor(Math.random() * images.length);
-  return require(`./assets/${images[randomIndex]}`); // Dynamically import image
+  return require(`../assets/${images[randomIndex]}`);  // Corrected path
 }
 
 function AboutUs() {
