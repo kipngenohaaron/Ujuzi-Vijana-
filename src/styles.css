@@ -1,22 +1,32 @@
 /* styles.css */
 
-/* Hero section */
-.hero {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+/* General form styles */
+.form-label {
+    font-weight: bold;
   }
   
-  /* Program cards */
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  /* Get Involved Cards */
   .card {
-    border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
   }
   
   /* Footer */
@@ -26,10 +36,10 @@
   }
   
   footer a {
-    text-decoration: none;
     color: #007bff;
-    margin: 0 10px;
+    text-decoration: none;
   }
+  
   footer a:hover {
     text-decoration: underline;
   }
