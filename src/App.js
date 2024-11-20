@@ -6,6 +6,7 @@ import Programs from "./components/Programs";
 import GetInvolved from "./components/GetInvolved";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
