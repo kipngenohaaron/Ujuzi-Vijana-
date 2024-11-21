@@ -17,7 +17,6 @@
 // export default Footer;
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css'; // Add a separate CSS file for styling
 
 function Footer() {
   return (
@@ -36,5 +35,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
