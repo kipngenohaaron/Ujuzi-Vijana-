@@ -43,55 +43,67 @@
     font-size: 1rem;
   }
   /* styles.css */
+/* Gradient background and smooth transitions */
 .navbar {
-  background-color: #007bff; /* Primary color */
-  padding: 1rem 2rem; /* Add padding around the navbar */
+  background: linear-gradient(to right, #0066cc, #3399ff); /* Blue gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: all 0.3s ease-in-out;
 }
 
-/* Logo Styling */
-.navbar .logo {
-  width: 40px; /* Adjust logo size */
-  margin-right: 10px;
-  
+.navbar:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
 }
 
-/* Navbar Links Styling */
-.navbar .nav-link {
-  color: #200fbb !important; /* White text color */
-  font-size: 18px; /* Font size */
-  margin-left: 20px; /* Add space between links */
-  transition: all 0.3s ease; /* Smooth transition on hover */
+/* Logo styling */
+.navbar-brand {
+  font-size: 1.75rem;
   font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
-/* Active link styling */
-.navbar .nav-link.active {
-  font-weight: bold; /* Make active link bold */
-  text-decoration: underline; /* Underline active link */
-  
+.navbar-brand:hover {
+  color: #f1f1f1; /* Lighter color on hover */
 }
 
-/* Navbar link hover effect */
-.navbar .nav-link:hover {
-  color: #ff00bf !important; /* Change color on hover */
-  text-decoration: none; /* Remove underline on hover */
-  
+/* Styling the navbar links */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 0 10px;
+  transition: color 0.3s, transform 0.3s;
 }
 
-/* Mobile Menu Styles */
-@media (max-width: 767px) {
-  .navbar .navbar-toggler {
-    border-color: #da2323; /* White toggle icon */
-  }
-
-  .navbar .navbar-toggler-icon {
-    background-color: #5a22b3; /* White icon */
-  }
+.nav-link:hover {
+  color: #f1f1f1; /* Light color on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Adding padding to the navbar on smaller screens */
-@media (max-width: 576px) {
+.nav-item.active .nav-link {
+  color: #ffcc00; /* Highlight active link with golden color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* For mobile responsiveness */
+.navbar-toggler-icon {
+  background-color: white; /* Toggler icon white for better visibility */
+}
+
+.navbar-collapse {
+  justify-content: flex-end; /* Align items to the right */
+}
+
+@media (max-width: 768px) {
   .navbar {
-    padding: 1rem; /* Reduce padding on small screens */
+    background: linear-gradient(to right, #0066cc, #3399ff); /* Maintain gradient on small screens */
+  }
+
+  .navbar-nav {
+    text-align: center;
   }
 }

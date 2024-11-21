@@ -1,29 +1,9 @@
-// import React from "react";
-
-// function Header() {
-//   return (
-//     <header>
-//       <div className="logo">
-//         <img src="/logo.png" alt="Ujuzi Vijana Logo" />
-//         <h1>Ujuzi Vijana</h1>
-//       </div>
-//       <nav>
-//         <ul>
-//           <li><a href="#about">About Us</a></li>
-//           <li><a href="#programs">Programs</a></li>
-//           <li><a href="#get-involved">Get Involved</a></li>
-//           <li><a href="#contact">Contact Us</a></li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// }
-
-// export default Header;
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
+  const location = useLocation();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -36,19 +16,19 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link">Home</Link>
+              <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">About Us</Link>
+              <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About Us</Link>
             </li>
             <li className="nav-item">
-              <Link to="/programs" className="nav-link">Programs</Link>
+              <Link to="/programs" className={`nav-link ${location.pathname === '/programs' ? 'active' : ''}`}>Programs</Link>
             </li>
             <li className="nav-item">
-              <Link to="/get-involved" className="nav-link">Get Involved</Link>
+              <Link to="/get-involved" className={`nav-link ${location.pathname === '/get-involved' ? 'active' : ''}`}>Get Involved</Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact" className="nav-link">Contact</Link>
+              <Link to="/contact" className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
             </li>
           </ul>
         </div>
