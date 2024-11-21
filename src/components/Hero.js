@@ -12,7 +12,7 @@
 
 // export default Hero;
 import React from 'react';
-import heroImage from '../assets/image3.jpg';  // Make sure this image exists
+import heroImage from '../assets/image5.jpg';  // Make sure this image exists
 
 function Hero() {
   return (
