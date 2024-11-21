@@ -284,37 +284,144 @@ footer p {
     margin-top: 10px;
   }
 }
-/* Contact Section Styling */
+/* Enhanced Contact Section Styling */
 .contact {
   background: #f9f9f9;
-  padding: 50px 0;
+  padding: 80px 0;  /* Extra padding for a spacious look */
+  position: relative;
+  overflow: hidden;
 }
 
+/* Add a subtle background animation or gradient */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+  animation: gradientAnimation 3s ease-in-out infinite;
+  z-index: -1; /* Ensure the background is behind the content */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Title Styling with Animation */
 .contact h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #333;
+  text-align: center;
+  position: relative;
+  animation: slideInFromTop 1s ease-out forwards;
 }
 
-/* Form Input & Textarea Animations */
+/* Slide in animation for the title */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Floating Labels */
 .input-animation {
+  position: relative;
+  padding: 12px 10px 12px 10px;
   transition: all 0.3s ease;
-  padding: 10px;
-  font-size: 1rem;
 }
 
 .input-animation:focus {
   border-color: #3498db;
   box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
   outline: none;
-}
-
-textarea:focus,
-input:focus {
   background-color: #f3f9ff;
 }
 
-/* Submit Button Styling */
+/* Floating Label Styling */
+.input-animation:focus + .form-label,
+.input-animation:not(:placeholder-shown) + .form-label {
+  transform: translateY(-20px);
+  font-size: 0.85rem;
+  color: #3498db;
+}
+
+/* Success Message Fade-in */
+.alert-success {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInAlert 1s ease-out forwards;
+}
+
+@keyframes fadeInAlert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Form Fields Animation */
+.form-control {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.form-control:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Input Hover Effect (Wiggle Effect) */
+.input-animation:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Social Media Buttons Animation */
+.social-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f39c12;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Submit Button Hover Animation */
 .btn-animation {
   transition: background-color 0.3s ease, transform 0.3s ease;
   padding: 12px 20px;
@@ -323,7 +430,7 @@ input:focus {
 
 .btn-animation:hover {
   background-color: #2980b9;
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
 }
 
 .btn-primary {
@@ -331,39 +438,24 @@ input:focus {
   border: none;
 }
 
-/* Social Media Buttons */
-.social-btn {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-btn:hover {
-  background-color: #f39c12;
-  transform: scale(1.05);
-}
-
-/* Success Message Styling */
-.alert-success {
-  background-color: #28a745;
-  color: white;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .contact {
-    padding: 30px 0;
+    padding: 40px 20px;
   }
 
   .contact h2 {
     font-size: 2rem;
   }
 
-  .input-animation {
+  .input-animation,
+  .form-control,
+  .btn-animation {
     width: 100%;
   }
 
-  .btn-animation {
+  .social-btn {
     width: 100%;
+    margin-bottom: 10px;
   }
 }
