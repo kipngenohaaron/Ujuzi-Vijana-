@@ -134,106 +134,100 @@
   }
 }
 
-  /* styles.css */
-/* General Navbar Styling */
-.navbar {
-  background: linear-gradient(45deg, #0066cc, #3399ff, #00b3e6); /* Dynamic gradient */
-  background-size: 400% 400%;
-  animation: gradientAnimation 5s ease infinite;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transition: all 0.3s ease-in-out;
-  z-index: 10; /* Ensure navbar is always on top */
+  /* General Navbar Styling */  
+.navbar {  
+  background: linear-gradient(45deg, #0066cc, #3399ff, #00b3e6);  
+  background-size: 400% 400%;  
+  animation: gradientAnimation 5s ease infinite;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
+  transition: all 0.3s ease-in-out;  
+  z-index: 10;   
+}  
+
+/* Logo animation */  
+.navbar-brand {  
+  font-size: 2rem;  
+  font-weight: bold;  
+  color: white;  
+  letter-spacing: 2px;  
+  text-transform: uppercase;  
+  transition: color 0.3s ease, transform 0.3s ease;  
+}  
+
+.navbar-brand:hover {  
+  color: #f1f1f1;  
+  transform: rotate(-5deg) scale(1.1);  
+}  
+
+/* Navbar link hover transformations */  
+.nav-link {  
+  font-size: 1.1rem;  
+  font-weight: 500;  
+  color: white;  
+  text-transform: uppercase;  
+  padding: 12px 20px;  
+  margin: 0 12px;  
+  border-radius: 6px;  
+  position: relative;  
+  overflow: hidden;  
+  transition: all 0.3s ease-in-out;  
+}  
+
+.nav-link::before {  
+  content: '';  
+  position: absolute;  
+  top: 50%;  
+  left: 50%;  
+  width: 300%;  
+  height: 300%;  
+  background-color: rgba(255, 255, 255, 0.2);  
+  transition: all 0.3s ease;  
+  border-radius: 50%;  
+  transform: translate(-50%, -50%) scale(0);  
+}  
+
+.nav-link:hover {  
+  color: #ffcc00;  
+  transform: scale(1.1);  
+}  
+
+.nav-link:hover::before {  
+  transform: translate(-50%, -50%) scale(1);  
+}  
+
+.nav-item.active .nav-link {  
+  color: #ffcc00;  
+  font-weight: bold;  
+  text-decoration: underline;  
+  border-bottom: 2px solid #ffcc00;  
+}  
+
+/* Responsive adjustments for the navbar */  
+@media (max-width: 768px) {  
+  .navbar-nav {  
+    flex-direction: column; /* Stack nav items vertically */  
+    align-items: center; /* Center align items */  
+    width: 100%; /* Full width on small screens */  
+  }  
+
+  .nav-link {  
+    padding: 10px;   
+    margin: 5px 0; /* Reduce margin for vertical layout */  
+    font-size: 1rem; /* Adjust font size for mobile */  
+    width: 100%; /* Full width for better clickability */  
+    text-align: center; /* Center text in nav items */  
+  }  
+
+  .navbar-toggler {  
+    margin-left: auto; /* Align toggler to the right */  
+  }  
+}  
+
+/* Adjust toggler icon */  
+.navbar-toggler-icon {  
+  background-color: white;   
 }
 
-/* Gradient animation */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Logo animation */
-.navbar-brand {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar-brand:hover {
-  color: #f1f1f1;
-  transform: rotate(-5deg) scale(1.1); /* Logo hover effect */
-}
-
-/* Navbar link hover transformations */
-.nav-link {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: white;
-  text-transform: uppercase;
-  padding: 12px 20px;
-  margin: 0 12px;
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.nav-link:hover {
-  color: #ffcc00; /* Golden color on hover */
-  transform: scale(1.1); /* Slight zoom-in effect */
-}
-
-.nav-link:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Expanding hover effect */
-}
-
-/* Active link styles */
-.nav-item.active .nav-link {
-  color: #ffcc00; /* Highlight active link with golden color */
-  font-weight: bold;
-  text-decoration: underline;
-  border-bottom: 2px solid #ffcc00; /* Underline active links */
-}
-
-/* Navbar Toggler */
-.navbar-toggler-icon {
-  background-color: white; /* White color for the toggler icon */
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  .navbar-nav {
-    text-align: center;
-  }
-  
-  .nav-link {
-    padding: 10px;
-    margin: 5px 0;
-    font-size: 1rem; /* Adjust font size for small screens */
-  }
-}
 /* Footer Styling */
 .footer {
   background: linear-gradient(to right, #3498db, #2c3e50);
