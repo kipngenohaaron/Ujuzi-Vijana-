@@ -144,61 +144,118 @@
 }
 /* Footer Styling */
 .footer {
-  background-color: #f8f9fa;
-  color: #555;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  color: #fff;
   border-top: 1px solid #ddd;
   position: relative;
   z-index: 100;
+  animation: fadeIn 1s ease-out;
 }
 
-/* Footer links container */
+/* Footer Links Container */
 .footer-links {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Individual footer links */
 .footer-link {
   font-size: 1rem;
-  color: #007bff;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for footer links */
 .footer-link:hover {
-  color: #0056b3;
-  transform: translateY(-5px);
+  color: #f39c12;
+  transform: scale(1.1);
 }
 
-/* Adding space between links */
 .footer-link.me-3 {
   margin-right: 1rem;
 }
 
-/* Small screen responsiveness */
-@media (max-width: 768px) {
-  .footer-links {
-    display: block;
-  }
-
-  .footer-link {
-    margin-bottom: 0.5rem;
-  }
+/* Social Media Icons */
+.social-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Footer text styling */
+.social-icon:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+/* Newsletter Section Styling */
+.newsletter-section {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.newsletter-section h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.newsletter-input {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.newsletter-btn {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #e67e22;
+}
+
+.scroll-to-top:focus {
+  outline: none;
+}
+
+/* Footer Text Styling */
 footer p {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #bbb;
+  margin-top: 10px;
 }
 
-/* Adding a subtle animation for the footer */
-.footer {
-  animation: slideUp 1s ease-in-out;
-}
-
-@keyframes slideUp {
+/* Fade-in Animation */
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -206,5 +263,24 @@ footer p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-links {
+    display: block;
+  }
+
+  .footer-link {
+    margin-bottom: 10px;
+  }
+
+  .newsletter-input {
+    width: 80%;
+  }
+
+  .newsletter-btn {
+    margin-top: 10px;
   }
 }
