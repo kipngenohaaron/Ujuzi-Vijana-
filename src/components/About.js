@@ -36,7 +36,7 @@
 
 // export default About;
 import React from 'react';
-import './AboutUs.css';  // Make sure to import the CSS file for styles
+ // Make sure to import the CSS file for styles
 
 function AboutUs() {
   return (
