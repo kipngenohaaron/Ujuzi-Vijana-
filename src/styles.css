@@ -284,3 +284,86 @@ footer p {
     margin-top: 10px;
   }
 }
+/* Contact Section Styling */
+.contact {
+  background: #f9f9f9;
+  padding: 50px 0;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Form Input & Textarea Animations */
+.input-animation {
+  transition: all 0.3s ease;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.input-animation:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+  outline: none;
+}
+
+textarea:focus,
+input:focus {
+  background-color: #f3f9ff;
+}
+
+/* Submit Button Styling */
+.btn-animation {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+}
+
+.btn-animation:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border: none;
+}
+
+/* Social Media Buttons */
+.social-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f39c12;
+  transform: scale(1.05);
+}
+
+/* Success Message Styling */
+.alert-success {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 0;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .input-animation {
+    width: 100%;
+  }
+
+  .btn-animation {
+    width: 100%;
+  }
+}
