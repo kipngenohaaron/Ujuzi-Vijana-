@@ -20,7 +20,7 @@ function Hero() {
       <div className="text-center text-white">
         <h1>Welcome to Ujuzi Vijana</h1>
         <p>Empowering the youth with skills for a brighter future</p>
-        <a href="#programs" className="btn btn-primary btn-lg">Start Learning</a>
+        <a href="programs" className="btn btn-primary btn-lg">Start Learning</a>
       </div>
     </section>
   );

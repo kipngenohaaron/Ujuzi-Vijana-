@@ -52,26 +52,30 @@
 .navbar .logo {
   width: 40px; /* Adjust logo size */
   margin-right: 10px;
+  
 }
 
 /* Navbar Links Styling */
 .navbar .nav-link {
-  color: #240ee9 !important; /* White text color */
+  color: #200fbb !important; /* White text color */
   font-size: 18px; /* Font size */
   margin-left: 20px; /* Add space between links */
   transition: all 0.3s ease; /* Smooth transition on hover */
+  font-weight: bold;
 }
 
 /* Active link styling */
 .navbar .nav-link.active {
   font-weight: bold; /* Make active link bold */
   text-decoration: underline; /* Underline active link */
+  
 }
 
 /* Navbar link hover effect */
 .navbar .nav-link:hover {
   color: #ff00bf !important; /* Change color on hover */
   text-decoration: none; /* Remove underline on hover */
+  
 }
 
 /* Mobile Menu Styles */
