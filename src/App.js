@@ -33,6 +33,8 @@ import GetInvolved from './components/GetInvolved';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles.css'; // Import global styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
